@@ -31,7 +31,7 @@ if [ "$1" ]; then
         plugindirname="${download##*/}"
         # download and unzip
         # wget $download && unzip -o $plugindirname -d /var/www/html/wp-content/plugins/
-        wget $download && unzip -o $plugindirname -d /usr/src/wordpress/
+        wget $download && unzip -o $plugindirname -d /usr/src/wordpress/wp-content/plugins/
 
         # delete zip file
         rm $plugindirname
@@ -48,7 +48,7 @@ if [ "$1" ]; then
        fi
        # download and unzip
        # wget https://downloads.wordpress.org/plugin/$download && unzip -o $download -d /var/www/html/wp-content/plugins/
-       wget https://downloads.wordpress.org/plugin/$download && unzip -o $download -d /usr/src/wordpress/
+       wget https://downloads.wordpress.org/plugin/$download && unzip -o $download -d /usr/src/wordpress//wp-content/plugins/
 
        # delete zip file
        rm $download
