@@ -36,8 +36,11 @@ RUN { \
 # ADD vars.sh /vars.sh
 ADD entrypoint.sh /entrypoint.sh
 ADD plugins.sh /plugins.sh
-RUN chmod +x /entrypoint.sh /vars.sh /plugins.sh
-
+RUN chmod +x /entrypoint.sh /plugins.sh # /vars.sh
 
 # execute custom entrypoint script
 CMD ["/entrypoint.sh"]
+
+# Cleanup
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
