@@ -48,7 +48,7 @@ if [ "$1" ]; then
        fi
        # download and unzip
        # wget https://downloads.wordpress.org/plugin/$download && unzip -o $download -d /var/www/html/wp-content/plugins/
-       wget https://downloads.wordpress.org/plugin/$download && unzip -o $download -d /usr/src/wordpress//wp-content/plugins/
+       wget https://downloads.wordpress.org/plugin/$download && unzip -o $download -d /usr/src/wordpress/wp-content/plugins/
 
        # delete zip file
        rm $download
