@@ -24,8 +24,8 @@ RUN apt-get update && apt-get install -y \
 
 # Custom scripts
 # ADD vars.sh /vars.sh
-ADD /entrypoint.sh /entrypoint.sh
-ADD /plugins.sh /plugins.sh
+ADD ../entrypoint.sh /entrypoint.sh
+ADD ../plugins.sh /plugins.sh
 RUN chmod +x /entrypoint.sh /plugins.sh # /vars.sh
 
 # execute custom entrypoint script
